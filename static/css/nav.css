@@ -1,0 +1,172 @@
+/* Fonte e Cor */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Adicionando um fundo claro para contraste */
+    margin: 0;
+    background-color: #ede0ffa6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #b67eff;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Para ajustar o posicionamento do menu hamburguer */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar Toggle Button */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px auto;
+    transition: 0.3s;
+}
+
+/* Navbar Menu */
+nav {
+    position: relative;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #cfa8f7;
+}
+/* About e Menu Sections */
+.about,
+.menu {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2,
+.menu h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Menu Items */
+.menu-items {
+    display: flex;
+    flex-wrap: nowrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    gap: 15px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+@media (max-width: 1120px) {
+.menu-items {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    gap: 15px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+}
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item h3 {
+    margin-bottom: 10px;
+    color: #8767cc;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #cfa8f7;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /* Ajusta o layout dos itens do menu para empilhamento em telas pequenas */
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+}

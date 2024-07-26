@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio - Confeitaria Delícia</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cardapio.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+</head>
+<body>
+<header>
+    <div class="container">
+      <div class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" width="300px"></div>
+      <nav>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="/">Início</a></li>
+          <li><a href="/sobre">Sobre nós</a></li>
+          <li><a href="/cardapio">Cardápio</a></li>
+          <li><a href="/contatos">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu">
+      <div class="container">
+        <h2>Nosso Cardápio</h2>
+        <div class="menu-items">
+  <div class="card">
+  <img src="caminho_para_a_imagem.jpg" alt="Nome do Bolo">
+  <h3>Nome do Bolo</h3>
+  <p>Descrição deliciosa do bolo.</p>
+  <p>R$ 50,00</p>
+</div>
+  </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('nav-menu');
+        menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

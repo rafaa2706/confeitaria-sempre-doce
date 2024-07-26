@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Confeitaria Delícia</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/contato.css') }}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" width="300px"></div>
+      <nav>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="/">Início</a></li>
+          <li><a href="/sobre">Sobre nós</a></li>
+          <li><a href="/cardapio">Cardápio</a></li>
+          <li><a href="/contatos">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+      <div class="box-formulario">
+
+        <div class="formulario">
+
+            <div class="title-form">
+              <h1><i class="icon icon-comments-o"></i> Fale Conosco Agora</h1>
+            </div>
+
+            <form action="#" method="post">
+
+
+                <span>
+                    <input type="text" class="input-slide" id="nome" name="nome" placeholder="Nome" autocomplete="off" required=""/>
+                    <label for="nome"> <i class="icon icon-user-outline"><img src="{{ url_for('static', filename='img/nome.png') }}" width="20px"></i> </label>
+                </span>
+
+                <span>
+                    <input type="text" class="input-slide" id="email" name="email" placeholder="E-mail" autocomplete="off" required=""/>
+                    <label for="email"> <i class="icon icon-mail-3"><img src="{{ url_for('static', filename='img/email.png') }}" width="20px"></i> </label>
+                </span>
+
+                <span>
+                    <input type="text" class="input-slide" id="assunto" name="assunto" placeholder="Assunto" autocomplete="off" required=""/>
+                    <label for="assunto"> <i class="icon icon-help"><img src="{{ url_for('static', filename='img/pergunta.png') }}" width="20px"></i> </label>
+                </span>
+
+                <span>
+                    <textarea type="text" class="textarea-slide" id="mensagem" name="mensagem" rows="3" placeholder="Mensagem" autocomplete="off" required=""></textarea>
+                    <label for="mensagem"> <i class="icon icon-commenting-o"><img src="{{ url_for('static', filename='img/msg.png') }}" width="20px"></i> </label>
+                </span>
+
+                <div class="box-btn">
+
+                    <button type="submit" class="btn-envia zoom-shadow">
+                        <i class="icon icon-export"> Enviar</i>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div><!--Box Formulario-->
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Confeitaria Delícia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
